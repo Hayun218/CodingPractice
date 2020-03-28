@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-vector <int> nanjangi;
+vector <int> nan;
 int sum;
 
 void answer(){
@@ -12,8 +12,8 @@ void answer(){
     for(int j = 1; j < 9; j++){
       if(sum - nanjangi[i] - nanjangi[j] == 100){
         for(int k = 0; k < 9; k++)
-          if(k != i && k != j)
-            printf("%d\n",nanjangi[k]);
+        if(k != i && k != j)
+        printf("%d\n",nanjangi[k]);
         return;
       }
     }
@@ -28,7 +28,7 @@ int main(){
     nanjangi.push_back(num);
     sum += num;
   }
-    sort(nanjangi.begin(), nanjangi.end());
-    answer();
-    return 0;
+  sort(nanjangi.begin(), nanjangi.end());
+  answer();
+  return 0;
 }
